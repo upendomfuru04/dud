@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>gastonngailo</title>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+   <link href="https://www.getvalue.co/assets/css/summernote.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
+
+<script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
+
+</head>
+<body>
+<style>
+
+  body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.show-menu {
+  width: 299px;
+  margin: 0 auto;
+  padding: 0.3em;
+  cursor: pointer;
+  text-align: center;
+  background-color:#272727;
+  border-radius: 50px;
+  border: 1px solid #d6bd70;
+  color: white;
+  
+}
+
+       a, a:hover, a:focus {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+    list-style-type: none;
+}
+
+
+
+ul  {
+    padding: 14px 0;
+    list-style-type: none;
+}
+
+
+li a {
+    padding: 9px;
+    font-size: 1.1em;
+    display: block;
+    list-style-type: none;
+}
+  li a:hover {
+    color: #7386D5;
+    background: #fff;
+    list-style-type: none;
+}
+
+ ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+    list-style-type: none;
+}
+ ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #d6bd70;
+}
+  
+
+</style>
+
+
+          <div id="wrapper">
+        <div id="content">
+            <nav class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <a href="" style="padding-left:0;"><img class="img-responsive" src="https://www.getvalue.co/assets/themes/logo.png" style="max-width:128px;"></a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <i class="fa fa-lg fa-bars"></i>
+                    </button>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li></li>
+                        <li>
+                            <a href="javascript:void();" data-toggle="modal" data-target="#changepassword" class="h-settings"><i class="fa fa-key" aria-hidden="true"></i> Change Password</a>
+                        </li>
+                        <li><a href="javascript:void(0);" data-toggle="modal" data-target="#modalCalculator"><i class="fa fa-calculator" aria-hidden="true"></i> Calculator</a></li>
+                        <li><a href="https://www.getvalue.co/" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i> Visit Web</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="vendor"> User Name</a></li>
+                        <li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+                    </ul>
+                </div>
+            
+  <div class="container-fluid">
+                <div class="row">
+                    <div class="navbar-inverse menu">
+                        <div class="show-menu">
+                            <a id="show-xs-nav" class="visible-xs" href="javascript:void(0)">
+                                <span class="show-sp">
+                                    Show menu
+                                    <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
+                                </span>
+                                <span class="hidde-sp">
+                                    Hide menu
+                                    <i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </div>
+
+
+      <ul class="sidebar-menu adminMenu">                                    
+       <li><a href="index.html"><i class="icon-home"></i> Home</a></li>
+       <li>
+    <a href="javascript:void();" ><i class="icon-list" aria-hidden="true"></i> Products <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="product.html">Add Product</a></li>
+                                    <li><a href="p2.html">View Products</a></li>
+                                </ul>
+                            </li>
+
+         <li><a href="sales.html" ><i class="fa fa-shopping-basket" aria-hidden="true"></i> Sales </a></li>
+
+         <li><a href="rafds.html" ><i class="fa fa-money" aria-hidden="true"></i> Refunds <span class="badge" style="position: absolute; right:10px; background:#ca4a1f;" id="refundCounter"></span></a></li>
+
+           <li><a href="coupon.html" ><i class="ti-archive" aria-hidden="true"></i> Coupons</a></li>
+           
+           <li><a href="order.html" ><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Orders <span class="badge" style="position: absolute; right:10px;  background:#ca4a1f;" id="orderCounter"></span></a></li>
+            <li>
+               <a href="javascript:void();" ><i class="ti-credit-card" aria-hidden="true"></i> Affiliate Urls  <span style="position: absolute; right:10px; ;"><i class="fa fa-caret-down"></i></span></a>
+                                <ul class="dropdown">
+                   <li><a href="Affiliate.html">Product Urls</a></li>
+                   <li><a href="vedor.html">Vendor Url</a></li>
+                                </ul>
+                            </li>
+         <li>
+         <a href="javascript:void();" ><i class="ti-cloud" aria-hidden="true"></i> Referrals <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
+         <ul class="dropdown">
+        <li><a href="p3.html">Products</a></li>
+        <li><a href="v.html">Vendors</a></li>
+           </ul>
+           </li>
+         <li><a href="aff.html" ><i class="fa fa-shopping-basket" aria-hidden="true"></i> Affiliate Sales </a></li>
+         <li><a href="affl.html" ><i class="fa fa-shopping-cart" aria-hidden="true"></i> Affiliate Orders <span class="badge" style="position: absolute; right:10px; background:#ca4a1f;" id="affiliateOrderCounter"></span></a></li>
+
+           <li><a href="cossio.html" ><i class="icon-tag" aria-hidden="true"></i> Commissions</a></li>
+           <li>
+            <a href="javascript:void();" ><i class="ti-credit-card" aria-hidden="true"></i> Withdrawal <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
+          <ul class="dropdown">
+           <li><a href="track.html">Track Request</a></li>
+           <li><a href="Withdrawal.html">Withdrawal Form</a></li>
+             </ul>
+            </li>
+            <li><a href="alert.html" ><i class="fa fa-envelope" aria-hidden="true"></i> Alerts/Messages <span class="badge" style="position: absolute; right:10px;  background:#ca4a1f;" id="messageCounter"></span></a></li>
+                            <li>
+            <a href="javascript:void();" ><i class="icon-handbag" aria-hidden="true"></i> Shop <span style="position: absolute; right:10px;"><i class="fa fa-caret-down"></i></span></a>
+             <ul class="dropdown">
+          <li><a href="sop.html">Shop Info</a></li>
+           <li><a href="pat.html">Payment Info</a></li>
+          <li><a href="Social.html">Social Accounts</a></li>
+                                </ul>
+                            </li>
+          <li><a href="javascript:void();" ><i class="fa fa-newspaper-o" aria-hidden="true"></i> Blog <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="post.html">New Post</a></li>
+                                    <li><a href="wpo.html">My Posts</a></li>
+           <li><a href="pedd.html">Pending Posts</a></li>
+           <li><a href="all.html">All Posts</a></li>
+             </ul>
+                            </li>
+            <li><a href="javascript:void();" ><i class="fa fa-question-circle" aria-hidden="true"></i> Self Help <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="elp.html">Post New Help</a></li>
+                                    <li><a href="sb.html">Sub-Categories</a></li>
+                                    <li><a href="allp.html">All Help</a></li>
+                                </ul>
+                            </li>
+          <li><a href="pdate.html"><i class="icon-user"></i> Update Profile</a></li>
+                   </ul>
+                 </div>
+                 </nav>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    <div class="row p-t-20">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+ <div class="panel-heading">
+                        <h3 class="panel-title">  Self Help</h3>
+                    </div>
+<div class="panel-body p40 row">
+<div class="table-responsive pt20 pb20">
+<table id="table_id"  class="display no-break-sm" cellspacing="0" width="100%">
+   <thead>
+                                    <tr>
+                                        <th>S/N</th>
+                                        <th>Image</th>
+                                        <th>Title</th>
+                                        <th>URL</th>
+                                        <th class="text-center">Views</th>
+                                        <th class="text-center">Posted Date</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                 <tbody>
+                                                                        <tr>
+                                        <td>1</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Using The Affiliate Area</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/using_the_affiliate_area" target="_blank">using_the_affiliate_area</a></td>
+                                        <td class="text-center">210</td>
+                                        <td class="text-center">14-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/37" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/37');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>2</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Creating An Affiliate Account</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/creating_an_affiliate_account" target="_blank">creating_an_affiliate_account</a></td>
+                                        <td class="text-center">197</td>
+                                        <td class="text-center">14-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/36" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/36');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>3</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Analytics Reporting</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/analytics_reporting" target="_blank">analytics_reporting</a></td>
+                                        <td class="text-center">216</td>
+                                        <td class="text-center">07-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/35" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/35');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>4</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Cookies Policy</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/cookies_policy" target="_blank">cookies_policy</a></td>
+                                        <td class="text-center">207</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/34" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/34');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>5</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Privacy Policy</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/privacy_policy" target="_blank">privacy_policy</a></td>
+                                        <td class="text-center">212</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/33" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/33');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>6</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Terms Of Services</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/terms_of_services" target="_blank">terms_of_services</a></td>
+                                        <td class="text-center">207</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/32" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/32');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>7</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">GetValue Fees And Charges</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/getvalue_fees_and_charges" target="_blank">getvalue_fees_and_charges</a></td>
+                                        <td class="text-center">199</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/31" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/31');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>8</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">How We Pay You</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/how_we_pay_you" target="_blank">how_we_pay_you</a></td>
+                                        <td class="text-center">226</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/30" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/30');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>9</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Password Management</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/password_management" target="_blank">password_management</a></td>
+                                        <td class="text-center">213</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/29" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/29');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>10</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Account Nickname</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/account_nickname" target="_blank">account_nickname</a></td>
+                                        <td class="text-center">196</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/28" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/28');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>11</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Signing Up For A GetValue Account</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/signing_up_for_a_getvalue_account" target="_blank">signing_up_for_a_getvalue_account</a></td>
+                                        <td class="text-center">201</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/27" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/27');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>12</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Affiliate Referral URLs</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/affiliate_referral_urls" target="_blank">affiliate_referral_urls</a></td>
+                                        <td class="text-center">221</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/26" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/26');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>13</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">How Do I Generate An Affiliate Referral Link/URL?</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/how_do_i_generate_an_affiliate_referral_linkurl" target="_blank">how_do_i_generate_an_affiliate_referral_linkurl</a></td>
+                                        <td class="text-center">197</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/25" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/25');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>14</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">How Long Does The Tracking Cookie Stay In The Customer’s Browser?</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/how_long_does_the_tracking_cookie_stay_in_the_customer’s_browser" target="_blank">how_long_does_the_tracking_cookie_stay_in_the_customer’s_browser</a></td>
+                                        <td class="text-center">247</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/24" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/24');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>15</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Is The Affiliate Tracked Across All Pages Of The Site?</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/is_the_affiliate_tracked_across_all_pages_of_the_site?" target="_blank">is_the_affiliate_tracked_across_all_pages_of_the_site?</a></td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/23" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/23');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>16</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">How Is An Affiliate Tracked?</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/how_is_an_affiliate_tracked?" target="_blank">how_is_an_affiliate_tracked?</a></td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/22" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/22');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>17</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Can Still Promote Products Without A Website?</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/can_still_promote_products_without_a_website" target="_blank">can_still_promote_products_without_a_website</a></td>
+                                        <td class="text-center">210</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/21" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/21');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>18</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Advice For New Affiliates</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/advice_for_new_affiliates" target="_blank">advice_for_new_affiliates</a></td>
+                                        <td class="text-center">214</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/20" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/20');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>19</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Earning Commissions & Getting Paid</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/earning_commissions_&_getting_paid" target="_blank">earning_commissions_&_getting_paid</a></td>
+                                        <td class="text-center">148</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/19" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/19');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>20</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Succeeding As An Affiliate</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/succeeding_as_an_affiliate" target="_blank">succeeding_as_an_affiliate</a></td>
+                                        <td class="text-center">216</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/18" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/18');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>21</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Creating Your First Product</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/creating_your_first_product" target="_blank">creating_your_first_product</a></td>
+                                        <td class="text-center">211</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/17" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/17');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>22</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Editing Existing Products</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/editing_existing_products" target="_blank">editing_existing_products</a></td>
+                                        <td class="text-center">192</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/16" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/16');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>23</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Product Images & Titles</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/product_images_&_titles" target="_blank">product_images_&_titles</a></td>
+                                        <td class="text-center">164</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/15" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/15');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>24</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Does GetValue Provide Copyright Protection For My Page Section And Products?</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/does_getvalue_provide_copyright_protection_for_my_page_section_and_products?" target="_blank">does_getvalue_provide_copyright_protection_for_my_page_section_and_products?</a></td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/14" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/14');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>25</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">What Products Are Allowed Or Not Allowed?</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/what_products_are_allowed_or_not_allowed?" target="_blank">what_products_are_allowed_or_not_allowed?</a></td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/13" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/13');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>26</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">How Many Products Can I Have In My Account?</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/how_many_products_can_i_have_in_my_account?" target="_blank">how_many_products_can_i_have_in_my_account?</a></td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/12" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/12');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>27</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Troubleshooting Customer Issues</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/troubleshooting_customer_issues" target="_blank">troubleshooting_customer_issues</a></td>
+                                        <td class="text-center">219</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/11" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/11');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>28</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Refunds & Chargebacks</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/refunds_&_chargebacks" target="_blank">refunds_&_chargebacks</a></td>
+                                        <td class="text-center">170</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/10" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/10');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>29</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Attracting Affiliates To Promote Your Products</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/attracting_affiliates_to_promote_your_products" target="_blank">attracting_affiliates_to_promote_your_products</a></td>
+                                        <td class="text-center">199</td>
+                                        <td class="text-center">05-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/9" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/9');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>30</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Content Delivery</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/content_delivery" target="_blank">content_delivery</a></td>
+                                        <td class="text-center">220</td>
+                                        <td class="text-center">04-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/8" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/8');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>31</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Understanding The Sales Funnel</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/understanding_the_sales_funnel" target="_blank">understanding_the_sales_funnel</a></td>
+                                        <td class="text-center">194</td>
+                                        <td class="text-center">04-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/7" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/7');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>32</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">The Vendor Approach</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/the_vendor_approach" target="_blank">the_vendor_approach</a></td>
+                                        <td class="text-center">223</td>
+                                        <td class="text-center">04-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/6" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/6');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>33</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Pricing Your Product</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/pricing_your_product" target="_blank">pricing_your_product</a></td>
+                                        <td class="text-center">206</td>
+                                        <td class="text-center">04-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/5" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/5');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>34</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">How To Select A Topic Or Niche</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/how_to_select_a_topic_or_niche" target="_blank">how_to_select_a_topic_or_niche</a></td>
+                                        <td class="text-center">227</td>
+                                        <td class="text-center">04-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/4" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/4');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>35</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Developing Your Product Offerings</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/developing_your_product_offerings" target="_blank">developing_your_product_offerings</a></td>
+                                        <td class="text-center">218</td>
+                                        <td class="text-center">04-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/3" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/3');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>36</td>
+                                        <td><img src="https://www.getvalue.co/media/help/" class="img-thumbnail productThumb" /></td>
+                                        <td class="no-break-sm">Advice For New Vendors</td>
+                                        <td class="break-all"><a href="https://www.getvalue.co/home/self_help_details/advice_for_new_vendors" target="_blank">advice_for_new_vendors</a></td>
+                                        <td class="text-center">222</td>
+                                        <td class="text-center">02-05-2020</td>
+                                        <td>
+                                            <!-- <a href="post_details/" class="text-success" data-toggle="tooltip" title="View"><i class="fa fa-eye"></i></a> -->
+                                            <a href="edit_self_help/2" class="text-info"><i class="fa fa-edit"></i></a>
+                                            <a href="javascript:void();" onclick="deletePost('https://www.getvalue.co/seller/delete_self_help/2');" class="text-danger"><i class="ti-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                                                    </tbody>
+                            </table>
+                        </div>
+                        <p class="sm-hint">Scroll horizontal to view more</p>
+                    </div>
+        </div>
+            </div>
+        </div>
+
+
+
+
+  
+
+<script>
+ 
+   $(document).ready(function(){
+        $('#table_id').DataTable();
+
+    });
+
+</script>
+  
+</head>
+<body>
+                        <br >
+                        <br >
+          </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="changepassword" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Change Password</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" id="changepassword-form">
+                        <div class="form-group">
+                            <input type="password" name="cpassword" class="form-control" placeholder="Current Password"> 
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="New Password"> 
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="repassword" class="form-control" id="passwordChangeField" placeholder="Re-Enter New Password">
+                        </div>
+                    </form>
+                    <div class="row"><div class="col-md-12" id="resultMsgChangePass"></div></div>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-info text-white waves-effect waves-light turnOnChangePassProgress" id="userChangePassword">Change Password</a>
+                    <a class="btn btn-info text-white waves-light progressBarChangePassBtn"><i class="fa fa-spinner fa-spin"></i> Processing...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+  <div class="modal fade" id="modalCalculator" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Calculator</h4>
+              </div>
+              <div class="modal-body" id="calculator">
+                  <div class="hero-unit" id="calculator-wrapper">
+                      <div class="row">
+                          <div class="col-sm-8">
+                              <div id="calculator-screen" class="form-control"></div>
+                          </div>
+                          <div class="col-sm-1">
+                              <div class="visible-xs">
+                                  =
+                              </div>
+                              <div class="hidden-xs">
+                                  =
+                              </div>
+                          </div>
+                          <div class="col-sm-3">
+                              <div id="calculator-result"  class="form-control">0</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="well">
+                      <div id="calc-board">
+                          <div class="row">
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="SIN" data-key="115">sin</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="COS" data-key="99">cos</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="MOD" data-key="109">md</a>
+                              <a href="javascript:void(0);" class="btn btn-danger" data-method="reset" data-key="8">C</a>
+                          </div>
+                          <div class="row">
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="55">7</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="56">8</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="57">9</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="BRO" data-key="40">(</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="BRC" data-key="41">)</a>
+                          </div>
+                          <div class="row">
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="52">4</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="53">5</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="54">6</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="MIN" data-key="45">-</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="SUM" data-key="43">+</a>
+                          </div>
+                          <div class="row">
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="49">1</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="50">2</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="51">3</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="DIV" data-key="47">/</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="MULT" data-key="42">*</a>
+                          </div>
+                          <div class="row">
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="46">.</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="48">0</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="PROC" data-key="37">%</a>
+                              <a href="javascript:void(0);" class="btn btn-primary" data-method="calculate" data-key="61">=</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="well">
+                      <legend>History</legend>
+                      <div id="calc-panel">
+                          <div id="calc-history">
+                              <ol id="calc-history-list"></ol>
+                          </div>
+                      </div>
+                  </div>
+                  <hr>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+    <script src="https://www.getvalue.co/assets/js/mine.js"></script>
+    <script src="https://www.getvalue.co/assets/js/mine_admin.js"></script>
+  
+</body>
+</html>
+<script>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>gastonngailo</title>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+   <link href="https://www.getvalue.co/assets/css/summernote.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+</head>
+<body>
+   <style>
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.show-menu {
+  width: 299px;
+  margin: 0 auto;
+  padding: 0.3em;
+  cursor: pointer;
+  text-align: center;
+  background-color:#272727;
+  border-radius: 50px;
+  border: 1px solid #d6bd70;
+  color: white;
+  
+}
+       a, a:hover, a:focus {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+    list-style-type: none;
+}
+
+
+
+ul  {
+    padding: 14px 0;
+    list-style-type: none;
+}
+
+
+li a {
+    padding: 9px;
+    font-size: 1.1em;
+    display: block;
+    list-style-type: none;
+}
+  li a:hover {
+    color: #7386D5;
+    background: #fff;
+    list-style-type: none;
+}
+
+ ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+    list-style-type: none;
+}
+ ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #d6bd70;
+}
+.courses-container {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 99vh;
+  margin: 0;
+}
+
+.course {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  max-width: 100%;
+  margin: 10px;
+  overflow: hidden;
+  width: 650px;
+}
+.course-info {
+  padding: 20px;
+  position: relative;
+  width: 100%;
+}
+
+img{
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+input[type=number], select, textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+label {
+  padding: 10px 10px 10px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+}
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+          <div id="wrapper"  style="background: #f1f1f1;">
+        <div id="content">
+            <nav class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <a href="" style="padding-left:0;"><img class="img-responsive" src="https://www.getvalue.co/assets/themes/logo.png" style="max-width:128px;"></a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <i class="fa fa-lg fa-bars"></i>
+                    </button>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li></li>
+                        <li>
+                            <a href="javascript:void();" data-toggle="modal" data-target="#changepassword" class="h-settings"><i class="fa fa-key" aria-hidden="true"></i> Change Password</a>
+                        </li>
+                        <li><a href="javascript:void(0);" data-toggle="modal" data-target="#modalCalculator"><i class="fa fa-calculator" aria-hidden="true"></i> Calculator</a></li>
+                        <li><a href="https://www.getvalue.co/" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i> Visit Web</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="vendor"> User Name</a></li>
+                        <li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+                    </ul>
+                </div>
+            
+
+  <div class="container-fluid">
+                <div class="row">
+                    <div class=" navbar-inverse menu">
+                        <div class="show-menu">
+                            <a id="show-xs-nav" class="visible-xs" href="javascript:void(0)">
+                                <span class="show-sp">
+                                    Show menu
+                                    <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
+                                </span>
+                                <span class="hidde-sp">
+                                    Hide menu
+                                    <i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </div>
+
+
+   <ul class="sidebar-menu adminMenu">                                    
+       <li><a href="index.html"><i class="icon-home"></i> Home</a></li>
+       <li>
+    <a href="javascript:void();" ><i class="icon-list" aria-hidden="true"></i> Products <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="product.html">Add Product</a></li>
+                                    <li><a href="p2.html">View Products</a></li>
+                                </ul>
+                            </li>
+
+         <li><a href="sales.html" ><i class="fa fa-shopping-basket" aria-hidden="true"></i> Sales </a></li>
+
+         <li><a href="rafds.html" ><i class="fa fa-money" aria-hidden="true"></i> Refunds <span class="badge" style="position: absolute; right:10px; background:#ca4a1f;" id="refundCounter"></span></a></li>
+
+           <li><a href="coupon.html" ><i class="ti-archive" aria-hidden="true"></i> Coupons</a></li>
+           
+           <li><a href="order.html" ><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Orders <span class="badge" style="position: absolute; right:10px;  background:#ca4a1f;" id="orderCounter"></span></a></li>
+            <li>
+               <a href="javascript:void();" ><i class="ti-credit-card" aria-hidden="true"></i> Affiliate Urls  <span style="position: absolute; right:10px; ;"><i class="fa fa-caret-down"></i></span></a>
+                                <ul class="dropdown">
+                   <li><a href="Affiliate.html">Product Urls</a></li>
+                   <li><a href="vedor.html">Vendor Url</a></li>
+                                </ul>
+                            </li>
+         <li>
+         <a href="javascript:void();" ><i class="ti-cloud" aria-hidden="true"></i> Referrals <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
+         <ul class="dropdown">
+        <li><a href="p3.html">Products</a></li>
+        <li><a href="v.html">Vendors</a></li>
+           </ul>
+           </li>
+         <li><a href="aff.html" ><i class="fa fa-shopping-basket" aria-hidden="true"></i> Affiliate Sales </a></li>
+         <li><a href="affl.html" ><i class="fa fa-shopping-cart" aria-hidden="true"></i> Affiliate Orders <span class="badge" style="position: absolute; right:10px; background:#ca4a1f;" id="affiliateOrderCounter"></span></a></li>
+
+           <li><a href="cossio.html" ><i class="icon-tag" aria-hidden="true"></i> Commissions</a></li>
+           <li>
+            <a href="javascript:void();" ><i class="ti-credit-card" aria-hidden="true"></i> Withdrawal <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
+          <ul class="dropdown">
+           <li><a href="track.html">Track Request</a></li>
+           <li><a href="Withdrawal.html">Withdrawal Form</a></li>
+             </ul>
+            </li>
+            <li><a href="alert.html" ><i class="fa fa-envelope" aria-hidden="true"></i> Alerts/Messages <span class="badge" style="position: absolute; right:10px;  background:#ca4a1f;" id="messageCounter"></span></a></li>
+                            <li>
+            <a href="javascript:void();" ><i class="icon-handbag" aria-hidden="true"></i> Shop <span style="position: absolute; right:10px;"><i class="fa fa-caret-down"></i></span></a>
+             <ul class="dropdown">
+          <li><a href="sop.html">Shop Info</a></li>
+           <li><a href="pat.html">Payment Info</a></li>
+          <li><a href="Social.html">Social Accounts</a></li>
+                                </ul>
+                            </li>
+          <li><a href="javascript:void();" ><i class="fa fa-newspaper-o" aria-hidden="true"></i> Blog <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="post.html">New Post</a></li>
+                                    <li><a href="wpo.html">My Posts</a></li>
+           <li><a href="pedd.html">Pending Posts</a></li>
+           <li><a href="all.html">All Posts</a></li>
+             </ul>
+                            </li>
+            <li><a href="javascript:void();" ><i class="fa fa-question-circle" aria-hidden="true"></i> Self Help <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
+                                <ul class="dropdown">
+                                    <li><a href="elp.html">Post New Help</a></li>
+                                    <li><a href="sb.html">Sub-Categories</a></li>
+                                    <li><a href="allp.html">All Help</a></li>
+                                </ul>
+                            </li>
+          <li><a href="pdate.html"><i class="icon-user"></i> Update Profile</a></li>
+                   </ul>
+                 </div>
+                 </nav>
+</body>
+</html>
+
+
+
+
+ <div class="courses-container">
+  <div class="course">
+    <div class="course-info">
+      <i class="fa fa-list" aria-hidden="true">  Add/Update Post</i>
+     <hr>
+      <div class="row">
+      	<div class="col-md-12"></div>
+      <div class="form-group col-md-12">
+      <center>
+         <img src="zx.jpg" class="img-thumbnail avatarHolder m-b-1" id="img-current-holder1"  />
+             <div class="col-md-12">
+                <input type="file" name="image" id="avatarImg" style="display: none;"  accept="image/*" src="" />
+                <br>
+               <label for="avatarImg" class="btn btn-sm btn-info waves-effect waves-light"><span>Upload Image</span></label>
+                     </div>
+              <div class="form-group col-md-6">
+                                        <label>Account Type:</label>
+                                        <select class="form-control" name="seller_type">
+                                            <option value="insider" >Insider</option>                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>Category:</label>
+                                        <select class="form-control" name="category">
+                                            <option value="">Select</option>
+                                            <option value="1">Blog</option><option value="2">Business/Investing</option><option value="3">Inspirations</option><option value="4">Self Help</option><option value="5">Online Programs & Training</option><option value="7">Personal Development</option><option value="8">Religion And Spirituality</option>                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label>Title:</label>
+                                        <textarea name="title" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label>Summary:</label>
+                                        <textarea name="summary" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label>Description:</label>
+                                        <textarea class="form-control summernote" name="content"></textarea>
+                                    </div>
+                                    <div class="col-md-12" id="resultMsg"></div>
+                                    <div class="col-md-12 p-t-10">
+                                 <a href="javascript:void();" class="btn btn-success mr-2 turnOnProgress" id="saveBtn">Save</a>
+                                                                              
+                                    </div>
+                                </div>
+                            </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+          
+</head>
+<body>
+                        <br >
+                        <br >
+          </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="changepassword" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Change Password</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" id="changepassword-form">
+                        <div class="form-group">
+                            <input type="password" name="cpassword" class="form-control" placeholder="Current Password"> 
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="New Password"> 
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="repassword" class="form-control" id="passwordChangeField" placeholder="Re-Enter New Password">
+                        </div>
+                    </form>
+                    <div class="row"><div class="col-md-12" id="resultMsgChangePass"></div></div>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-info text-white waves-effect waves-light turnOnChangePassProgress" id="userChangePassword">Change Password</a>
+                    <a class="btn btn-info text-white waves-light progressBarChangePassBtn"><i class="fa fa-spinner fa-spin"></i> Processing...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+  <div class="modal fade" id="modalCalculator" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Calculator</h4>
+              </div>
+              <div class="modal-body" id="calculator">
+                  <div class="hero-unit" id="calculator-wrapper">
+                      <div class="row">
+                          <div class="col-sm-8">
+                              <div id="calculator-screen" class="form-control"></div>
+                          </div>
+                          <div class="col-sm-1">
+                              <div class="visible-xs">
+                                  =
+                              </div>
+                              <div class="hidden-xs">
+                                  =
+                              </div>
+                          </div>
+                          <div class="col-sm-3">
+                              <div id="calculator-result"  class="form-control">0</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="well">
+                      <div id="calc-board">
+                          <div class="row">
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="SIN" data-key="115">sin</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="COS" data-key="99">cos</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="MOD" data-key="109">md</a>
+                              <a href="javascript:void(0);" class="btn btn-danger" data-method="reset" data-key="8">C</a>
+                          </div>
+                          <div class="row">
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="55">7</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="56">8</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="57">9</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="BRO" data-key="40">(</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="BRC" data-key="41">)</a>
+                          </div>
+                          <div class="row">
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="52">4</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="53">5</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="54">6</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="MIN" data-key="45">-</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="SUM" data-key="43">+</a>
+                          </div>
+                          <div class="row">
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="49">1</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="50">2</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="51">3</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="DIV" data-key="47">/</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="MULT" data-key="42">*</a>
+                          </div>
+                          <div class="row">
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="46">.</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-key="48">0</a>
+                              <a href="javascript:void(0);" class="btn btn-default" data-constant="PROC" data-key="37">%</a>
+                              <a href="javascript:void(0);" class="btn btn-primary" data-method="calculate" data-key="61">=</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="well">
+                      <legend>History</legend>
+                      <div id="calc-panel">
+                          <div id="calc-history">
+                              <ol id="calc-history-list"></ol>
+                          </div>
+                      </div>
+                  </div>
+                  <hr>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+    <script src="https://www.getvalue.co/assets/js/mine.js"></script>
+    <script src="https://www.getvalue.co/assets/js/mine_admin.js"></script>
+  
+</body>
+</html>
