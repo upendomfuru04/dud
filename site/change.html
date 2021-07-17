@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>gastonngailo</title>
+  <title>gastonngailo</title>
   <title></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,7 @@
     <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	 <style>
+   <style>
 
 
 body {
@@ -33,7 +33,6 @@ body {
   color: white;
   
 }
-
        a, a:hover, a:focus {
     color: white;
     text-decoration: none;
@@ -57,7 +56,7 @@ li a {
 }
   li a:hover {
     color: #7386D5;
-    background: #fff ;
+    background: #fff;
     list-style-type: none;
 }
 
@@ -71,9 +70,6 @@ li a {
     padding-left: 30px !important;
     background: #d6bd70;
 }
-  
-
-
 .courses-container {
   font-family: 'Muli', sans-serif;
   display: flex;
@@ -89,106 +85,87 @@ li a {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   max-width: 100%;
-  margin: 20px;
+  margin: 10px;
   overflow: hidden;
   width: 650px;
 }
-
-.course h5{
-  opacity: 0.6;
-  margin: 0;
-  letter-spacing: 1px;
-}
-
-.course h2 {
-  letter-spacing: 1px;
-  margin: 10px 0;
-}
-
-
 .course-info {
-  padding: 30px;
+  padding: 20px;
   position: relative;
   width: 100%;
 }
-.btn {
-  background-color: #2A265F;
-  border: 0;
-  border-radius: 50px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  font-size: 16px;
-  padding: 12px 25px;
-  bottom: 30px;
-  right: 30px;
-  letter-spacing: 1px;
+
+img{
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
-.sidebar {
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  padding-top: 16px;
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
 }
-.sidebar a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 18px;
-  color: #818181;
-  display: block;
+input[type=number], select, textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
 }
 
+label {
+  padding: 10px 10px 10px 0;
+  display: inline-block;
+}
 
-
-
-
-
-
-
-
-
-.can{
-  font-family: 'poppins', sans-serif;
-  margin: 20px 40px;
+input[type=submit] {
   color: white;
-  
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+}
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.profiles{
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 80px;
-}
-
-.profile{
-  flex-basis: 260px;
-}
 
 
-.profile:hover{
-  filter: grayscale(0);
-} 
 
 
-.profile h5{
-	font-size: 25px;
-  font-weight: 100;
-  letter-spacing: 3px;
-}
 
-.profile h3{
-  margin-top: 20px;
-  text-align: center;
-  font-size: 18px;
-}
 
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
+
+
+
+
+
+
+
 
 </style>
+</head>
+<body>
+
 
 
           <div id="wrapper"  style="background: #f1f1f1;">
@@ -312,135 +289,118 @@ li a {
  <div class="courses-container">
   <div class="course">
     <div class="course-info">
-      
-      <h2>Welcome to GetValue Inc!</h2>
-      <h5>We’ve assembled some links to get you started:</h5>
-      <br>
-      <button class="btn"><a href="pro.html">Update Profile</a> </button>
-  <br>
-  <br>
-     <p >or <a style="color:blue;" href="javascript:void();" data-toggle="modal" data-target="#changepassword" class="h-settings">Change Password</a>
-                        </li></p>
-     <h4>Next Steps</h4>
-     <div class="sidebar">
-  <a style="color:blue;" href="change.html"><i style="color:#868686" class="fa fa-registered"  aria-hidden="true"></i>  Add brand</a>
-<a style="color:blue;" href="product.html"><i class="fa fa-plus" style="color:#868686" aria-hidden="true"></i>  Add product</a>
-<a style="color:blue;" href="product.html"><i class="fa fa-newspaper-o" style="color:#868686" aria-hidden="true"></i>  Add blog post</a>
-<a style="color:blue;" href="p2.html"><i class="fa fa-list" style="color:#868686" aria-hidden="true"></i>  view product</a>
-</div>
     
-     <h4>More Actions</h4>
-      <div class="sidebar">
-    <a style="color:blue;" href="order.html"><i class="fa fa-cart-arrow-down" style="color: #868686" aria-hidden="true"></i>  Order</a>
-      <a style="color:blue;" href="cossio.html"><i class="fa fa-tags" style="color: #868686" aria-hidden="true"></i>  Commissions</a>
-       <a style="color:blue;" href="wpo.html"><i class="fa fa-newspaper-o" style="color:#868686" aria-hidden="true"></i>  My post</a>
-     <a style="color:blue;" href="pat.html"><i class="fa fa-shopping-bag" style="color:#868686" aria-hidden="true"></i>  Payment Info</a>
-     </div>
-    </div>
-  </div>
-</div>
+                       <div class="row p-t-20">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+ <div class="panel-heading">
+                        <h3 class="panel-title">  Pending Posts</h3>
+                    </div>
+<div class="panel-body p40 row">
+<div class="table-responsive pt20 pb20">
+<table id="table_id"  class="display no-break-sm" cellspacing="0" width="100%">
+      <thead>
+                                <tr>
+                                        <th>S/N</th>
+                                        <th>Logo</th>
+                                        <th>Banner</th>
+                                        <th>Brand</th>
+                                        <th>Seller Type</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>S/N</th>
+                                        <th>Logo</th>
+                                        <th>Banner</th>
+                                        <th>Brand</th>
+                                        <th>Seller Type</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </tfoot>
+                        
+
+    <tbody>
+                 
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <p class="sm-hint">Scroll horizontal to view more</p>
+                    </div>
+        </div>
+            </div>
+        </div>
 
 
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> Add/Update</h3>
+                    </div>
+                    <div class="panel-body p-40 row">
+                        <form id="data-form" method="POST">
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label>Seller Type:</label>
+                                    <select class="form-control" name="seller_type">
+                                        <option value="insider" >Insider</option><option value="vendor" >Vendor</option>                                    </select>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Brand:</label>
+                                    <input type="text" name="brand" class="form-control" placeholder="eg. Shop Name" value="">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <center>
+                                        <img src="https://www.getvalue.co/media/shop/logo/default.jpg" class="img-thumbnail avatarHolder m-b-10" id="img-current-holder"/>
+                                        <div class="col-md-12">
+                                            <input type="file" name="logo" id="logoImg" style="display: none;"  accept="image/*" src="" />
+                                            <label for="logoImg" class="btn btn-sm btn-info waves-effect waves-light"><span>Change Logo</span></label>
+                                        </div>
+                                    </center>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <center>
+                                        <img src="" class="img-thumbnail avatarHolder m-b-10" id="img-current-holder1"/>
+                                        <div class="col-md-12">
+                                            <input type="file" name="banner" id="bannerImg" style="display: none;"  accept="image/*" src="" />
+                                            <label for="bannerImg" class="btn btn-sm btn-info waves-effect waves-light"><span>Change Banner</span></label>
+                                        </div>
+                                    </center>
+                                </div>
+                                <div class="col-md-12" id="resultMsg"></div>
+                                <div class="col-md-12 p-t-10">
+                                 <a href="javascript:void();" class="btn btn-success mr-2 turnOnProgress" id="saveBtn">Save</a>
+                                                                        
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
- <div class="can" style="background-color:#9400d3">
-   
-   <div class="profiles">
-     <div class="profile">
-     	<br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Total Products</h3>
-       <center><h5>0 </h5></center>
-       <br>
-     	
-     </div>
-     </div>
-     </div>
-
-      <div class="can" style="background-color:#1569c7">
-   
-   <div class="profiles">
-     <div class="profile">
-      <br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i> Pending Posts </h3>
-       <center><h5>0 </h5></center>
-       <br>
       
-     </div>
-     </div>
-     </div>
+
+   
+      
+       
+                 
+  
+
+
+    
+
+
+
+
+
+  
+
+
+
      
-     <div class="can" style="background-color:#d80072">
-      <div class="profiles">
-     <div class="profile">
-     	<br>
-     	
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Pending Commissions</h3>
-       <center><h5>0 Tsh. </h5></center>
-       <br>
-     	
-     </div>
-     </div>
-      </div>
-
-       <div class="can" style="background-color:#488ac7">
-   
-   <div class="profiles">
-     <div class="profile">
-      <br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Approved Posts</h3>
-       <center><h5>0 </h5></center>
-       <br>
-      
-     </div>
-     </div>
-     </div>
-
-
-
-      <div class="can" style="background-color:#00bd58">
-      <div class="profiles">
-     <div class="profile">
-     	<br>
-     	
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Paid Commissions</h3>
-       <center><h5>0 Tsh. </h5></center>
-       <br>
-     	
-     </div>
-   </div>
- </div>
-   <div class="can" style="background-color:orange">
-      <div class="profiles">
-     <div class="profile">
-     	<br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Pending Orders</h3>
-       <center><h5>0 </h5></center>
-       <br>
-     </div>
-     </div>
-      </div>
-<div class="can" style="background-color:#1e90ff">
-      <div class="profiles">
-     <div class="profile">
-     	<br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i> Complete Orders</h3>
-      <center><h5>0 </h5></center> 
-       <br>
-     </div>
-     </div>
-      </div>
-
 
 
 
@@ -472,12 +432,36 @@ li a {
 
 <script>
 
+
+ function checkDFile(){
+        var mtype=document.getElementById('downloadable_media_type').value;
+        if(mtype=='downloadable'){
+            $('#downloadable').css('display', 'block');
+            $('#virtual').css('display', 'none');
+        }else{
+            $('#virtual').css('display', 'block');
+            $('#downloadable').css('display', 'none');
+        }
+    }
+
+     function setFileName(input, holderID, prevLink, name_holder=""){
+        var file = input.files[0].name;
+        document.getElementById(holderID).value=file;
+
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            // $('#img-current-holder3').attr('src', e.target.result);
+            $('#'+prevLink).attr('href', e.target.result);
+                    }
+        reader.readAsDataURL(input.files[0]);
+    }
+
+
+
+
 </script>
-</body>
-</html><!DOCTYPE html>
-<html>
-<head>
-  
+
+          
 </head>
 <body>
                         <br >
@@ -604,4 +588,3 @@ li a {
   
 </body>
 </html>
-<script>

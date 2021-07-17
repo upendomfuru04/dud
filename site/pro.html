@@ -182,6 +182,16 @@ li a {
   text-align: center;
   font-size: 18px;
 }
+label {
+  padding: 10px 10px 10px 0;
+  display: inline-block;
+}
+img{
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
 
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
@@ -307,139 +317,67 @@ li a {
 </html>
 
 
-
-
- <div class="courses-container">
-  <div class="course">
-    <div class="course-info">
-      
-      <h2>Welcome to GetValue Inc!</h2>
-      <h5>We’ve assembled some links to get you started:</h5>
-      <br>
-      <button class="btn"><a href="pro.html">Update Profile</a> </button>
-  <br>
-  <br>
-     <p >or <a style="color:blue;" href="javascript:void();" data-toggle="modal" data-target="#changepassword" class="h-settings">Change Password</a>
-                        </li></p>
-     <h4>Next Steps</h4>
-     <div class="sidebar">
-  <a style="color:blue;" href="change.html"><i style="color:#868686" class="fa fa-registered"  aria-hidden="true"></i>  Add brand</a>
-<a style="color:blue;" href="product.html"><i class="fa fa-plus" style="color:#868686" aria-hidden="true"></i>  Add product</a>
-<a style="color:blue;" href="product.html"><i class="fa fa-newspaper-o" style="color:#868686" aria-hidden="true"></i>  Add blog post</a>
-<a style="color:blue;" href="p2.html"><i class="fa fa-list" style="color:#868686" aria-hidden="true"></i>  view product</a>
-</div>
-    
-     <h4>More Actions</h4>
-      <div class="sidebar">
-    <a style="color:blue;" href="order.html"><i class="fa fa-cart-arrow-down" style="color: #868686" aria-hidden="true"></i>  Order</a>
-      <a style="color:blue;" href="cossio.html"><i class="fa fa-tags" style="color: #868686" aria-hidden="true"></i>  Commissions</a>
-       <a style="color:blue;" href="wpo.html"><i class="fa fa-newspaper-o" style="color:#868686" aria-hidden="true"></i>  My post</a>
-     <a style="color:blue;" href="pat.html"><i class="fa fa-shopping-bag" style="color:#868686" aria-hidden="true"></i>  Payment Info</a>
-     </div>
+<h1 class="breadcumb"></h1>
+    <div class="home-page">
+        <div class="row p-t-20">
+            <div class="col-md-7 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="ti-user fa-fw"></i> My Profile</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div id="container-by-month" style="min-width: 310px; min-height: 400px; margin: 0 auto;">
+                            <form action="https://www.getvalue.co/users/update_seller_profile" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+                                <div class="row">
+                                    <div class="col-md-12"></div>
+                                    <div class="form-group col-md-12">
+                                        <center>
+                                            <img src="https://www.getvalue.co/media/seller_avatars/default.png" class="img-circle img-thumbnail avatarHolder m-b-10" id="img-current-holder1"/>
+                                            <div class="col-md-12">
+                                                <input type="file" name="avatar" id="avatarImg" style="display: none;"  accept="image/*"/>
+                                                <label for="avatarImg" class="btn btn-sm btn-info waves-effect waves-light"><span>Change Image</span></label>
+                                            </div>
+                                        </center>
+                                    </div>
+                                    <div class="form-group col-md-8">
+                                        <label>Full Name:</label>
+                                        <input type="text" name="full_name" class="form-control" value="Your name...">
+                                                                            </div>
+                                    <div class="form-group col-md-4">
+                                        <label>Gender:</label>
+                                        <select class="form-control" name="gender">
+                                            <option value="">Select</option>
+                                            <option value="male" >Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                                                            </div>
+                                    <div class="form-group col-md-6">
+                                        <label>Phone:</label>
+                                        <input type="text" name="phone" class="form-control" value="0657513016">
+                                                                            </div>
+                                    <div class="form-group col-md-6">
+                                        <label>Email Address:</label>
+                                        <input type="text" name="email" class="form-control" value="example@gmail.com">
+                                                                            </div>
+                                    <div class="form-group col-md-6">
+                                        <label>Address:</label>
+                                        <input type="text" name="address" class="form-control" value="" placeholder="eg. P. O. Box 0000">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>PostCode:</label>
+                                        <input type="text" name="postCode" class="form-control" value="">
+                           </div>
+                          <div class="col-md-12 p-t-10">
+                  <input type="submit" class="btn btn-success" value="Save" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <div class="can" style="background-color:#9400d3">
-   
-   <div class="profiles">
-     <div class="profile">
-     	<br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Total Products</h3>
-       <center><h5>0 </h5></center>
-       <br>
-     	
-     </div>
-     </div>
-     </div>
-
-      <div class="can" style="background-color:#1569c7">
-   
-   <div class="profiles">
-     <div class="profile">
-      <br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i> Pending Posts </h3>
-       <center><h5>0 </h5></center>
-       <br>
-      
-     </div>
-     </div>
-     </div>
-     
-     <div class="can" style="background-color:#d80072">
-      <div class="profiles">
-     <div class="profile">
-     	<br>
-     	
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Pending Commissions</h3>
-       <center><h5>0 Tsh. </h5></center>
-       <br>
-     	
-     </div>
-     </div>
-      </div>
-
-       <div class="can" style="background-color:#488ac7">
-   
-   <div class="profiles">
-     <div class="profile">
-      <br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Approved Posts</h3>
-       <center><h5>0 </h5></center>
-       <br>
-      
-     </div>
-     </div>
-     </div>
-
-
-
-      <div class="can" style="background-color:#00bd58">
-      <div class="profiles">
-     <div class="profile">
-     	<br>
-     	
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Paid Commissions</h3>
-       <center><h5>0 Tsh. </h5></center>
-       <br>
-     	
-     </div>
-   </div>
- </div>
-   <div class="can" style="background-color:orange">
-      <div class="profiles">
-     <div class="profile">
-     	<br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Pending Orders</h3>
-       <center><h5>0 </h5></center>
-       <br>
-     </div>
-     </div>
-      </div>
-<div class="can" style="background-color:#1e90ff">
-      <div class="profiles">
-     <div class="profile">
-     	<br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i> Complete Orders</h3>
-      <center><h5>0 </h5></center> 
-       <br>
-     </div>
-     </div>
-      </div>
 
 
 
@@ -470,9 +408,9 @@ li a {
 
 
 
-<script>
 
-</script>
+
+
 </body>
 </html><!DOCTYPE html>
 <html>
